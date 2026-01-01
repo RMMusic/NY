@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Новорічний Таймер - vClock Style</title>
+    <title>NY Timer</title>
     <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;600;800&family=Rubik+Bubbles&display=swap" rel="stylesheet">
 
 <style>
@@ -11,7 +11,6 @@
         margin: 0; padding: 0;
         width: 100%; height: 100%;
         overflow: hidden; background-color: #000;
-        /* Playpen Sans для загального тексту */
         font-family: 'Playpen Sans', cursive;
     }
     
@@ -32,15 +31,13 @@
         font-weight: 400; 
     }
     
-    /* ТІЛЬКИ ДЛЯ ТАЙМЕРА - Rubik Bubbles */
     .timer { 
         font-family: 'Rubik Bubbles', cursive;
-        font-size: 12vw; /* Збільшив розмір, бо Bubbles виглядає компактніше */
+        font-size: 12vw;
         line-height: 1; 
         margin-bottom: 30px; 
         letter-spacing: 3px;
         color: #ffa500;
-        /* Додаємо легке світіння, щоб "бульбашки" були об'ємнішими */
         text-shadow: 4px 4px 0px rgba(0,0,0,0.5), 0 0 20px rgba(255, 165, 0, 0.4);
     }
     
@@ -66,7 +63,7 @@
 
     .celebration-text {
         position: absolute; z-index: 5;
-        font-family: 'Rubik Bubbles', cursive; /* Святкові вигуки теж будуть бульбашками */
+        font-family: 'Rubik Bubbles', cursive;
         animation: popOut 3.5s forwards; pointer-events: none;
         text-align: center; white-space: nowrap;
     }
@@ -78,7 +75,6 @@
         100% { transform: scale(1.4); opacity: 0; }
     }
 
-    /* Кнопки */
     .controls-wrapper { position: absolute; top: 0; right: 0; width: 300px; height: 150px; z-index: 100; }
     .controls {
         position: absolute; top: 20px; right: 20px; display: flex; gap: 10px;
@@ -138,8 +134,8 @@
             uk: { 
                 title: 'Новий Рік', days: ['НЕД','ПОН','ВІВ','СЕР','ЧЕТ','П\'ЯТ','СУБ'], 
                 months: ['СІЧ','ЛЮТ','БЕР','КВІ','ТРА','ЧЕР','ЛИП','СЕР','ВЕР','ЖОВ','ЛИС','ГРУ'], 
-                btn: 'EN', prefix: "Для", names: ["Тоні", "Олі", "Руслана"],
-                celebrate: ["УРА!", "2026!", "З СВЯТОМ!", "ЩАСТЯ!", "ЛЮБОВІ!", "МИРУ!", "ПЕРЕМОГИ!", "УСПІХУ!", "РАДОСТІ!", "МАГІЇ!", "СЯЙВА!", "ТЕПЛА!", "ЗДОРОВ'Я!", "МРІЙ!", "НОВИХ ВИСОТ!", "ПОСМІШОК!", "З НОВИМ РОКОМ!", "ВІТАЮ!", "ОТ ЦЕ ТАК!", "ЧАС ДИВ!", "КРУТО!", "WOW!", "СУПЕР!", "КЛАС!", "ВПЕРЕД!", "ТІЛЬКИ ВГОРУ!", "ВІР В СЕБЕ!", "Твій рік!", "Найкращий!", "Обіймаю!", "Цілую!", "Сяй!", "Лети!", "Живи!", "Твори!", "Мрій!", "Дій!", "Люби!", "Радій!", "Смійся!", "Насолоджуйся!", "Відчувай!", "Ти — космос!", "Все вийде!", "Твій час!", "Магія поруч!", "Щасливі разом!", "Будь собою!", "Зі святом!", "Веселися!", "Співай!", "Танцюй!", "Хай щастить!", "Блищи!", "Світло в тобі!", "Добро поруч!", "Сил тобі!", "Наснаги!", "Затишку!", "Комфорту!", "Гармонії!", "Спокою!", "Свободи!", "Подиху!", "Нового дня!", "Яскравості!", "Шику!", "Блиску!", "Краси!", "Ніжності!", "Мужності!", "Сміливості!", "Відваги!", "Удачі!", "Фортуни!", "Шансу!", "Можливостей!", "Відкриттів!", "Подорожей!", "Вражень!", "Сюрпризів!", "Дарунків!", "Сміху!", "Веселощів!", "Дружби!", "Вірності!", "Підтримки!", "Єдності!", "Зустрічей!", "Побачень!", "Пригод!", "Інтриги!", "Драйву!", "Енергії!", "Ритму!", "Життя!", "Долі!", "Дива!", "Казки!", "Мрії!"],
+                btn: 'EN', names: ["Тоні", "Олі", "Руслану"],
+                celebrate: ["УРА!", "З СВЯТОМ!", "ЩАСТЯ!", "ЛЮБОВІ!", "МИРУ!", "ПЕРЕМОГИ!", "УСПІХУ!", "РАДОСТІ!", "МАГІЇ!", "СЯЙВА!", "ТЕПЛА!", "ЗДОРОВ'Я!", "МРІЙ!", "НОВИХ ВИСОТ!", "ПОСМІШОК!", "З НОВИМ РОКОМ!", "ВІТАЮ!", "ОТ ЦЕ ТАК!", "ЧАС ДИВ!", "КРУТО!", "WOW!", "СУПЕР!", "КЛАС!", "ВПЕРЕД!", "ТІЛЬКИ ВГОРУ!", "ВІР В СЕБЕ!", "Твій рік!", "Найкращий!", "Обіймаю!", "Цілую!", "Сяй!", "Лети!", "Живи!", "Твори!", "Мрій!", "Дій!", "Люби!", "Радій!", "Смійся!", "Насолоджуйся!", "Відчувай!", "Ти — космос!", "Все вийде!", "Твій час!", "Магія поруч!", "Щасливі разом!", "Будь собою!", "Зі святом!", "Веселися!", "Співай!", "Танцюй!", "Хай щастить!", "Блищи!", "Світло в тобі!", "Добро поруч!", "Сил тобі!", "Наснаги!", "Затишку!", "Комфорту!", "Гармонії!", "Спокою!", "Свободи!", "Подиху!", "Нового дня!", "Яскравості!", "Шику!", "Блиску!", "Краси!", "Ніжності!", "Мужності!", "Сміливості!", "Відваги!", "Удачі!", "Фортуни!", "Шансу!", "Можливостей!", "Відкриттів!", "Подорожей!", "Вражень!", "Сюрпризів!", "Дарунків!", "Сміху!", "Веселощів!", "Дружби!", "Вірності!", "Підтримки!", "Єдності!", "Зустрічей!", "Побачень!", "Пригод!", "Інтриги!", "Драйву!", "Енергії!", "Ритму!", "Життя!", "Долі!", "Дива!", "Казки!", "Мрії!"],
                 wishes: [
                     "хай цей рік стане початком вашої найвеличнішої історії успіху та самопізнання.",
                     "бажаю, щоб кожен ранок починався з відчуття безмежної вдячності та енергії для нових звершень.",
@@ -196,8 +192,8 @@
             en: { 
                 title: 'New Year', days: ['SUN','MON','TUE','WED','THU','FRI','SAT'], 
                 months: ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'], 
-                btn: 'UA', prefix: "For", names: ["Tony", "Olya", "Ruslan"],
-                celebrate: ["YAY!", "2026!", "CHILL!", "JOY!", "LOVE!", "PEACE!", "WIN!", "GOAL!", "FUN!", "MAGIC!", "GLOW!", "WARM!", "HEALTH!", "DREAMS!", "BOOM!", "SMILE!", "HAPPY NEW YEAR!", "HI!", "OMG!", "TIME!", "COOL!", "WOW!", "SUPER!", "YES!", "NEXT!", "UP!", "BELIEVE!", "Yours!", "Best!", "Hugs!", "Kisses!", "Shine!", "Fly!", "Live!", "Create!", "Dream!", "Do it!", "Love!", "Rejoice!", "Laugh!", "Enjoy!", "Feel!", "Cosmic!", "Done!", "Your time!", "Magic!", "Together!", "Be you!", "Party!", "Have fun!", "Sing!", "Dance!", "Luck!", "Flash!", "Light!", "Kind!", "Power!", "Spirit!", "Cozy!", "Comfort!", "Harmony!", "Calm!", "Free!", "Breath!", "New day!", "Bright!", "Chic!", "Glass!", "Beauty!", "Tender!", "Brave!", "Bold!", "Courage!", "Luck!", "Fortune!", "Chance!", "Option!", "Discovery!", "Travel!", "Impression!", "Surprise!", "Gift!", "Laugh!", "Joy!", "Friend!", "Faith!", "Support!", "Unit!", "Meeting!", "Date!", "Adventure!", "Intrigue!", "Drive!", "Energy!", "Rhythm!", "Life!", "Fate!", "Miracle!", "Fairy!", "Wish!"],
+                btn: 'UA', names: ["For Tonya", " For Olya", "For Ruslan"],
+                celebrate: ["YAY!", "CHILL!", "JOY!", "LOVE!", "PEACE!", "WIN!", "GOAL!", "FUN!", "MAGIC!", "GLOW!", "WARM!", "HEALTH!", "DREAMS!", "BOOM!", "SMILE!", "HAPPY NEW YEAR!", "HI!", "OMG!", "TIME!", "COOL!", "WOW!", "SUPER!", "YES!", "NEXT!", "UP!", "BELIEVE!", "Yours!", "Best!", "Hugs!", "Kisses!", "Shine!", "Fly!", "Live!", "Create!", "Dream!", "Do it!", "Love!", "Rejoice!", "Laugh!", "Enjoy!", "Feel!", "Cosmic!", "Done!", "Your time!", "Magic!", "Together!", "Be you!", "Party!", "Have fun!", "Sing!", "Dance!", "Luck!", "Flash!", "Light!", "Kind!", "Power!", "Spirit!", "Cozy!", "Comfort!", "Harmony!", "Calm!", "Free!", "Breath!", "New day!", "Bright!", "Chic!", "Glass!", "Beauty!", "Tender!", "Brave!", "Bold!", "Courage!", "Luck!", "Fortune!", "Chance!", "Option!", "Discovery!", "Travel!", "Impression!", "Surprise!", "Gift!", "Laugh!", "Joy!", "Friend!", "Faith!", "Support!", "Unit!", "Meeting!", "Date!", "Adventure!", "Intrigue!", "Drive!", "Energy!", "Rhythm!", "Life!", "Fate!", "Miracle!", "Fairy!", "Wish!"],
                 wishes: [
                     "may this year be the start of your greatest success story and self-discovery.",
                     "I wish every morning starts with a feeling of deep gratitude and energy for new goals.",
@@ -292,7 +288,7 @@
             const corners = [{top:'60px',left:'60px',right:'auto',bottom:'auto',textAlign:'left'},{top:'60px',right:'60px',left:'auto',bottom:'auto',textAlign:'right'},{bottom:'60px',left:'60px',top:'auto',right:'auto',textAlign:'left'},{bottom:'60px',right:'60px',top:'auto',left:'auto',textAlign:'right'}];
             const c = corners[Math.floor(Math.random()*4)];
             Object.assign(wishEl.style, { top: c.top, left: c.left, right: c.right, bottom: c.bottom, textAlign: c.textAlign });
-            wishEl.innerText = `${t.prefix} ${t.names[nIdx]}:\n${t.wishes[wIdx]}`;
+            wishEl.innerText = `${t.names[nIdx]}:\n${t.wishes[wIdx]}`;
             wishEl.classList.add('show');
             setTimeout(() => wishEl.classList.remove('show'), 9000);
             nIdx = (nIdx+1)%t.names.length; wIdx = (wIdx+1)%t.wishes.length;
